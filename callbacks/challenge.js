@@ -24,13 +24,9 @@ fetchData(`${API}/products`, function (error1, data1) {
         if (error2) return console.error(error2);
         fetchData(`${API}/categories/${data2.category.id}`, function (error3, data3) {
             if (error3) return console.error(error3);
-            console.log('-------------------------------------------------------------------')
             console.log(data1[0]);
-            console.log('-------------------------------------------------------------------')
             console.log(data2.title);
-            console.log('-------------------------------------------------------------------')
             console.log(data3.name);
-            console.log('-------------------------------------------------------------------')
         });
     });
 });
